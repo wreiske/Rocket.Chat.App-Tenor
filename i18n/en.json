@@ -1,5 +1,5 @@
 {
-    "Tenor_Command_Description": "Search for a matching image (Powered by Tenor.com)",
+    "Tenor_Command_Description": "Search for a matching gif (Powered by Tenor.com)",
     "Tenor_Search_Term": "cats",
     "Customize_Tenor_APIKey": "Tenor API Key",
     "Customize_Tenor_APIKey_Description": "Please get your own Tenor API Key at https://tenor.com/developer/keyregistration"

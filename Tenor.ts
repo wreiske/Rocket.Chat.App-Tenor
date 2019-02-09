@@ -27,11 +27,38 @@ export class TenorApp extends App {
         await configuration.settings.provideSetting({
             id: 'tenor_apikey',
             type: SettingType.STRING,
-            packageValue: 'IMA1E4Y79RUU',
+            packageValue: '',
             required: true,
             public: false,
             i18nLabel: 'Customize_Tenor_APIKey',
             i18nDescription: 'Customize_Tenor_APIKey_Description',
+        });
+        await configuration.settings.provideSetting({
+            id: 'tenor_lang_code',
+            type: SettingType.STRING,
+            packageValue: 'en_US',
+            required: true,
+            public: false,
+            i18nLabel: 'Customize_Tenor_Language',
+            i18nDescription: 'Customize_Tenor_Language_Description',
+        });
+        await configuration.settings.provideSetting({
+            id: 'tenor_content_filter',
+            type: SettingType.STRING,
+            packageValue: 'low',
+            required: true,
+            public: false,
+            i18nLabel: 'Customize_Tenor_ContentFilter',
+            i18nDescription: 'Customize_Tenor_ContentFilter_Description',
+        });
+        await configuration.settings.provideSetting({
+            id: 'tenor_show_title',
+            type: SettingType.BOOLEAN,
+            packageValue: true,
+            required: true,
+            public: false,
+            i18nLabel: 'Customize_Tenor_Show_Title',
+            i18nDescription: 'Customize_Tenor_Show_Title_Description',
         });
         await configuration.slashCommands.provideSlashCommand(new TenorCommand(this));
     }

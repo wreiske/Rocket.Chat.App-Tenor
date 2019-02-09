@@ -3,13 +3,16 @@ import { TenorResult } from './TenorResult';
 import { TenorImageResult } from './TenorImageResult';
 
 export class ImageGetter {
+    private readonly defaultKey = 'IMA1E4Y79RUU';
     public async search(logger: ILogger, http: IHttp, phase: string, read: IRead): Promise<Array<TenorResult>> {
         let search = phase.trim();
         if (!search) {
             search = 'random';
         }
-        const key = await read.getEnvironmentReader().getSettings().getValueById('tenor_apikey');
-        const response = await http.get(`https://api.tenor.com/v1/search?q=${search}&key=${key}&limit=15`);
+        const key = await read.getEnvironmentReader().getSettings().getValueById('tenor_apikey') || this.defaultKey;
+        const langCode = await read.getEnvironmentReader().getSettings().getValueById('tenor_lang_code') || 'en_US';
+        const rating = await read.getEnvironmentReader().getSettings().getValueById('tenor_content_filter') || 'low';
+        const response = await http.get(`https://api.tenor.com/v1/search?q=${search}&key=${key}&limit=10&locale=${langCode}&contentfilter=${rating}`);
 
         if (response.statusCode !== HttpStatusCode.OK || !response.data || !response.data.results) {
             logger.debug('Did not get a valid response', response);
@@ -23,7 +26,7 @@ export class ImageGetter {
     }
 
     public async getOne(logger: ILogger, http: IHttp, imageId: string, read: IRead): Promise<TenorImageResult> {
-        const key = await read.getEnvironmentReader().getSettings().getValueById('tenor_apikey');
+        const key = await read.getEnvironmentReader().getSettings().getValueById('tenor_apikey') || this.defaultKey;
         const response = await http.get(`https://api.tenor.com/v1/gifs?key=${key}&ids=${imageId}`);
 
         if (response.statusCode !== HttpStatusCode.OK || !response.data || !response.data.results) {

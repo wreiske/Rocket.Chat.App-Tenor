@@ -47,11 +47,19 @@ export class TenorCommand implements ISlashCommand {
 
         try {
             const image = await this.app.getImageGetter().getOne(this.app.getLogger(), http, item.id, read);
+            const showTitle = await read.getEnvironmentReader().getSettings().getValueById('tenor_show_title');
+            const trigger = context.getArguments().join(' ').trim();
+
             builder.addAttachment({
                 title: {
-                    value: image.title,
+                    value: ((showTitle) ? image.title.trim() : ''),
                 },
-                imageUrl: image.originalUrl,
+                author: {
+                    icon: 'https://raw.githubusercontent.com/wreiske/Rocket.Chat.App-Tenor/master/images/Tenor-256.png',
+                    name: `/tenor ${trigger.trim()}`,
+                    link: `https://tenor.com/search/${trigger.trim()}`,
+                },
+                imageUrl: image.originalUrl
             });
 
             await modify.getCreator().finish(builder);

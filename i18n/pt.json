@@ -1,0 +1,12 @@
+{
+  "Customize_Tenor_APIKey": "Chave da API do Tenor",
+  "Customize_Tenor_APIKey_Description": "Por favor, obtenha sua própria chave de API do Tenor em https://tenor.com/developer/keyregistration",
+  "Customize_Tenor_ContentFilter": "Filtro de Conteúdo",
+  "Customize_Tenor_ContentFilter_Description": "(valores: off | low | medium | high) Veja https://tenor.com/gifapi/documentation#contentfilter",
+  "Customize_Tenor_Language": "Pesquisar código de idioma",
+  "Customize_Tenor_Language_Description": "Veja https://tenor.com/gifapi/documentation#localization e https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes",
+  "Customize_Tenor_Show_Title": "Mostrar títulos de imagens",
+  "Customize_Tenor_Show_Title_Description": "Mostra o título do gif (se existir um título)",
+  "Tenor_Command_Description": "Procurar por um gif correspondente (Alimentado por Tenor.com)",
+  "Tenor_Search_Term": "gatos"
+}

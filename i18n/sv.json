@@ -1,0 +1,12 @@
+{
+  "Customize_Tenor_APIKey": "Tenor API-nyckel",
+  "Customize_Tenor_APIKey_Description": "Vänligen skaffa din egen Tenor API-nyckel på https://tenor.com/developer/keyregistration",
+  "Customize_Tenor_ContentFilter": "Innehållsfilter",
+  "Customize_Tenor_ContentFilter_Description": "(värden: off | low | medium | high) Se https://tenor.com/gifapi/documentation#contentfilter",
+  "Customize_Tenor_Language": "Sök språkkod",
+  "Customize_Tenor_Language_Description": "Se https://tenor.com/gifapi/documentation#localization och https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes",
+  "Customize_Tenor_Show_Title": "Visa bildtitlar",
+  "Customize_Tenor_Show_Title_Description": "Visar titeln på gif (om en titel finns)",
+  "Tenor_Command_Description": "Sök efter ett matchande gif (Drivet av Tenor.com)",
+  "Tenor_Search_Term": "katter"
+}

@@ -1,6 +1,12 @@
 {
-    "Tenor_Command_Description": "Search for a matching gif (Powered by Tenor.com)",
-    "Tenor_Search_Term": "cats",
-    "Customize_Tenor_APIKey": "Tenor API Key",
-    "Customize_Tenor_APIKey_Description": "Please get your own Tenor API Key at https://tenor.com/developer/keyregistration"
+  "Customize_Tenor_APIKey": "Tenor API Key",
+  "Customize_Tenor_APIKey_Description": "Please get your own Tenor API Key at https://tenor.com/developer/keyregistration",
+  "Customize_Tenor_ContentFilter": "Content Filter",
+  "Customize_Tenor_ContentFilter_Description": "(values: off | low | medium | high) See https://tenor.com/gifapi/documentation#contentfilter",
+  "Customize_Tenor_Language": "Search Language Code",
+  "Customize_Tenor_Language_Description": "See https://tenor.com/gifapi/documentation#localization and https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes",
+  "Customize_Tenor_Show_Title": "Show Image Titles",
+  "Customize_Tenor_Show_Title_Description": "Shows the title of the gif (if a title exists)",
+  "Tenor_Command_Description": "Search for a matching gif (Powered by Tenor.com)",
+  "Tenor_Search_Term": "cats"
 }

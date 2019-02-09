@@ -21,3 +21,9 @@ https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 ### Content filtering
 
 https://tenor.com/gifapi/documentation#contentfilter
+
+## Related Apps
+
+https://github.com/wreiske/Rocket.Chat.App-Giphy
+
+https://github.com/wreiske/Rocket.Chat.App-Imgur

@@ -7,6 +7,8 @@
   "Customize_Tenor_Language_Description": "Veja https://tenor.com/gifapi/documentation#localization e https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes",
   "Customize_Tenor_Show_Title": "Mostrar títulos de imagens",
   "Customize_Tenor_Show_Title_Description": "Mostra o título do gif (se existir um título)",
+  "Customize_Tenor_Show_Link": "Mostrar link",
+  "Customize_Tenor_Show_Link_Description": "Mostrar termo de pesquisa e um link para tenor.com",
   "Tenor_Command_Description": "Procurar por um gif correspondente (Alimentado por Tenor.com)",
   "Tenor_Search_Term": "gatos"
 }

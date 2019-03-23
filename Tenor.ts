@@ -60,6 +60,15 @@ export class TenorApp extends App {
             i18nLabel: 'Customize_Tenor_Show_Title',
             i18nDescription: 'Customize_Tenor_Show_Title_Description',
         });
+        await configuration.settings.provideSetting({
+            id: 'tenor_show_link',
+            type: SettingType.BOOLEAN,
+            packageValue: true,
+            required: true,
+            public: false,
+            i18nLabel: 'Customize_Tenor_Show_Link',
+            i18nDescription: 'Customize_Tenor_Show_Link_Description',
+        });
         await configuration.slashCommands.provideSlashCommand(new TenorCommand(this));
     }
 }

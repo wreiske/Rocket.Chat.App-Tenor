@@ -58,7 +58,7 @@ export class TenorCommand implements ISlashCommand {
                 },
                 author: {
                     icon: 'https://raw.githubusercontent.com/wreiske/Rocket.Chat.App-Tenor/master/images/Tenor-256.png',
-                    name: (showLink ? `/tenor ${trigger.trim()} ${showLink}` : ''),
+                    name: (showLink ? `/tenor ${trigger.trim()}` : ''),
                     link: (showLink ? `https://tenor.com/search/${trigger.trim()}` : ''),
                 },
                 imageUrl: image.originalUrl

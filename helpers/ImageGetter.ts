@@ -10,9 +10,10 @@ export class ImageGetter {
             search = 'random';
         }
         const key = await read.getEnvironmentReader().getSettings().getValueById('tenor_apikey') || this.defaultKey;
+        const limit = await read.getEnvironmentReader().getSettings().getValueById('tenor_image_limit') || '10';
         const langCode = await read.getEnvironmentReader().getSettings().getValueById('tenor_lang_code') || 'en_US';
         const rating = await read.getEnvironmentReader().getSettings().getValueById('tenor_content_filter') || 'low';
-        const response = await http.get(`https://api.tenor.com/v1/search?q=${search}&key=${key}&limit=10&locale=${langCode}&contentfilter=${rating}`);
+        const response = await http.get(`https://api.tenor.com/v1/search?q=${search}&key=${key}&limit=${limit}&locale=${langCode}&contentfilter=${rating}`);
 
         if (response.statusCode !== HttpStatusCode.OK || !response.data || !response.data.results) {
             logger.debug('Did not get a valid response', response);

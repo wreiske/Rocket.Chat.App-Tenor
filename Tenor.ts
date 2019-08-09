@@ -60,6 +60,15 @@ export class TenorApp extends App {
             i18nLabel: 'Customize_Tenor_Show_Title',
             i18nDescription: 'Customize_Tenor_Show_Title_Description',
         });
+        wait configuration.settings.provideSetting({
+            id: 'tenor_image_limit',
+            type: SettingType.STRING,
+            packageValue: '10',
+            required: false,
+            public: false,
+            i18nLabel: 'Customize_Tenor_Image_Limit',
+            i18nDescription: 'Customize_Tenor_Image_Limit_Description',
+        });
         await configuration.slashCommands.provideSlashCommand(new TenorCommand(this));
     }
 }

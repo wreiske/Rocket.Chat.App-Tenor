@@ -5,7 +5,7 @@ export class TenorResult {
     public title: string;
     public previewUrl: string;
 
-    // Returns data we care about from the imgur endpoint
+    // Returns data we care about from the tenor endpoint
     // TODO: Allow large gif previews to be resized in the preview...
     constructor(data?: any) {
         if (data) {

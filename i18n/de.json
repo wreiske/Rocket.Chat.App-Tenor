@@ -1,0 +1,14 @@
+{
+  "Customize_Tenor_APIKey": "Tenor API Schlüssel",
+  "Customize_Tenor_APIKey_Description": "Auf https://tenor.com/developer/keyregistration können Sie Ihren API Schlüssel erhalten",
+  "Customize_Tenor_ContentFilter": "Inhaltsfilter",
+  "Customize_Tenor_ContentFilter_Description": "(zulässige Werte: off | low | medium | high) Siehe https://tenor.com/gifapi/documentation#contentfilter",
+  "Customize_Tenor_Language": "Sprachcode für die Suche",
+  "Customize_Tenor_Language_Description": "Siehe https://tenor.com/gifapi/documentation#localization und https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes",
+  "Customize_Tenor_Show_Title": "Zeige Bildtitle",
+  "Customize_Tenor_Show_Title_Description": "Zeige den Titel des Bildes in der Nachricht (soweit vorhanden)",
+  "Customize_Tenor_Show_Link": "Zeige Link",
+  "Customize_Tenor_Show_Link_Description": "Zeige den Suchbegriff sowie einen link zu tenor.com in der Nachricht",
+  "Tenor_Command_Description": "Suche nach GIFs auf Tenor.com",
+  "Tenor_Search_Term": "Katze"
+}

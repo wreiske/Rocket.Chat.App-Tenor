@@ -7,6 +7,8 @@
   "Customize_Tenor_Language_Description": "Se https://tenor.com/gifapi/documentation#localization och https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes",
   "Customize_Tenor_Show_Title": "Visa bildtitlar",
   "Customize_Tenor_Show_Title_Description": "Visar titeln på gif (om en titel finns)",
+  "Customize_Tenor_Show_Link": "Visa länk",
+  "Customize_Tenor_Show_Link_Description": "Visa sökord och en länk till tenor.com",
   "Tenor_Command_Description": "Sök efter ett matchande gif (Drivet av Tenor.com)",
   "Tenor_Search_Term": "katter"
 }

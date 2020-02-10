@@ -45,6 +45,12 @@ export class TenorCommand implements ISlashCommand {
         modify: IModify, http: IHttp, persis: IPersistence): Promise<void> {
         const builder = modify.getCreator().startMessage().setSender(context.getSender()).setRoom(context.getRoom());
 
+        const tid = context.getThreadId();
+
+        if (tid) {
+            builder.setThreadId(tid);
+        }
+        
         try {
             const image = await this.app.getImageGetter().getOne(this.app.getLogger(), http, item.id, read);
             const showTitle = (await read.getEnvironmentReader().getSettings().getById('tenor_show_title')).value;

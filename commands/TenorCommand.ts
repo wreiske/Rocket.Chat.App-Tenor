@@ -1,6 +1,6 @@
 import { IHttp, IModify, IPersistence, IRead } from '@rocket.chat/apps-engine/definition/accessors';
 import { ISlashCommand, ISlashCommandPreview, ISlashCommandPreviewItem, SlashCommandContext } from '@rocket.chat/apps-engine/definition/slashcommands';
-import { TenorApp } from '../Tenor';
+import { Tenor } from '../Tenor';
 import { TenorResult } from '../helpers/TenorResult';
 
 export class TenorCommand implements ISlashCommand {
@@ -9,7 +9,7 @@ export class TenorCommand implements ISlashCommand {
     public i18nDescription = 'Tenor_Command_Description';
     public providesPreview = true;
 
-    constructor(private readonly app: TenorApp) { }
+    constructor(private readonly app: Tenor) { }
 
     public executor(context: SlashCommandContext, read: IRead, modify: IModify, http: IHttp, persis: IPersistence): Promise<void> {
         // if there are no args or args[0] === 'random'

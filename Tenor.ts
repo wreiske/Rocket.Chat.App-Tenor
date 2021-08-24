@@ -10,7 +10,7 @@ import { SettingType } from '@rocket.chat/apps-engine/definition/settings';
 import { TenorCommand } from './commands/TenorCommand';
 import { ImageGetter } from './helpers/ImageGetter';
 
-export class TenorApp extends App {
+export class Tenor extends App {
     private imageGetter: ImageGetter;
 
     constructor(info: IAppInfo, logger: ILogger) {

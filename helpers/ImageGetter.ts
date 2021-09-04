@@ -12,15 +12,15 @@ export class ImageGetter {
         const key = await read.getEnvironmentReader().getSettings().getValueById('tenor_apikey') || this.defaultKey;
         const langCode = await read.getEnvironmentReader().getSettings().getValueById('tenor_lang_code') || 'en_US';
         const rating = await read.getEnvironmentReader().getSettings().getValueById('tenor_content_filter') || 'low';
-        const response = await http.get(`https://api.tenor.com/v1/search?q=${search}&key=${key}&limit=10&locale=${langCode}&contentfilter=${rating}`);
+        const response = await http.get(`https://api.tenor.com/v1/search?q=${encodeURIComponent(search)}&key=${key}&limit=10&locale=${langCode}&contentfilter=${rating}`);
 
-        if (response.statusCode !== HttpStatusCode.OK || !response.data || !response.data.results) {
+        if (response && response.statusCode !== HttpStatusCode.OK || !response || !response.data || !response.data.results) {
             logger.debug('Did not get a valid response', response);
             throw new Error('Unable to retrieve images.');
         } else if (!Array.isArray(response.data.results)) {
             logger.debug('The response data is not an Array:', response.data);
             throw new Error('Data is in a format we don\'t understand.');
-        } 
+        }
 
         return response.data.results.map((r) => new TenorResult(r));
     }
@@ -29,7 +29,7 @@ export class ImageGetter {
         const key = await read.getEnvironmentReader().getSettings().getValueById('tenor_apikey') || this.defaultKey;
         const response = await http.get(`https://api.tenor.com/v1/gifs?key=${key}&ids=${imageId}`);
 
-        if (response.statusCode !== HttpStatusCode.OK || !response.data || !response.data.results) {
+        if (response && response.statusCode !== HttpStatusCode.OK || !response || !response.data || !response.data.results) {
             logger.debug('Did not get a valid response', response);
             throw new Error('Unable to retrieve the image.');
         } else if (typeof response.data.results !== 'object') {

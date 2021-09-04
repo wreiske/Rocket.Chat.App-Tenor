@@ -2,7 +2,7 @@
     "id": "ab4728ec-613e-472f-a24c-b48a77aacfff",
     "name": "Tenor",
     "nameSlug": "tenor",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "requiredApiVersion": "^1.19.0",
     "description": "Search for gifs directly inside Rocket.Chat (Powered by Tenor.com)",
     "author": {
